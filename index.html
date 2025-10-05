@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ру">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChinaTravel - Путешествия в Китай для россиян</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fas fa-dragon me-2"></i>ChinaTravel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Возможности</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#itinerary">Планирование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#booking">Бронирование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">Поддержка</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Откройте Китай с <span class="text-warning">ChinaTravel</span>
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Полноценное приложение для российских туристов в Китае. 
+                        Безвизовый режим с сентября 2025 года, ИИ-планирование маршрутов, 
+                        интеграция с местными сервисами.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-warning btn-lg px-4" onclick="scrollToSection('itinerary')">
+                            <i class="fas fa-route me-2"></i>Спланировать поездку
+                        </button>
+                        <button class="btn btn-outline-light btn-lg px-4" onclick="scrollToSection('features')">
+                            <i class="fas fa-info-circle me-2"></i>Узнать больше
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="static/images/china-hero.jpg" 
+                             alt="China Travel" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Ключевые возможности</h2>
+                    <p class="lead text-muted">Все необходимое для комфортного путешествия в Китай</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain text-primary"></i>
+                        </div>
+                        <h4>ИИ-планирование</h4>
+                        <p>Умный генератор маршрутов с учетом ваших интересов, бюджета и культурных особенностей</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-plane text-success"></i>
+                        </div>
+                        <h4>Единое бронирование</h4>
+                        <p>Авиабилеты, поезда, отели - все в одном месте с поддержкой карт Мир и UnionPay</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt text-info"></i>
+                        </div>
+                        <h4>Офлайн карты</h4>
+                        <p>Карты Baidu и Amap с русскими подписями для навигации без интернета</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-language text-warning"></i>
+                        </div>
+                        <h4>Переводчик</h4>
+                        <p>Голосовой и текстовый перевод меню, вывесок и общения с местными</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-bag text-danger"></i>
+                        </div>
+                        <h4>Шопинг-ассистент</h4>
+                        <p>Калькулятор возврата НДС, рекомендации магазинов и лучшие места для покупок</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt text-secondary"></i>
+                        </div>
+                        <h4>Безопасность</h4>
+                        <p>VPN-настройка, медицинская помощь, экстренные контакты и советы по безопасности</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerary" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">ИИ-генератор маршрутов</h2>
+                    <p class="lead mb-4">Создайте идеальный маршрут с учетом ваших предпочтений и бюджета</p>
+                    
+                    <form id="itineraryForm" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Город</label>
+                            <select class="form-select" id="city" required>
+                                <option value="Пекин">Пекин</option>
+                                <option value="Шанхай">Шанхай</option>
+                                <option value="Гуанчжоу">Гуанчжоу</option>
+                                <option value="Шэньчжэнь">Шэньчжэнь</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Количество дней</label>
+                            <select class="form-select" id="days" required>
+                                <option value="3">3 дня</option>
+                                <option value="5">5 дней</option>
+                                <option value="7">7 дней</option>
+                                <option value="10">10 дней</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Режим маршрута</label>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mode" id="modePopular" value="popular" checked>
+                                        <label class="form-check-label" for="modePopular">Популярный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mode" id="modeCheapest" value="cheapest">
+                                        <label class="form-check-label" for="modeCheapest">Самый дешевый</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mode" id="modeCultural" value="cultural">
+                                        <label class="form-check-label" for="modeCultural">Экскурсионный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mode" id="modeWork" value="work_min">
+                                        <label class="form-check-label" for="modeWork">Рабочий минимум</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Интересы</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="культура" id="culture" checked>
+                                        <label class="form-check-label" for="culture">Культура</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="шопинг" id="shopping" checked>
+                                        <label class="form-check-label" for="shopping">Шопинг</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="еда" id="food" checked>
+                                        <label class="form-check-label" for="food">Еда</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Бюджет (руб.)</label>
+                            <input type="number" class="form-control" id="budget" value="100000" min="10000" max="1000000">
+                        </div>
+                        <div class="col-12">
+                            <div class="alert alert-info small" id="travelContextBox" style="display:none"></div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-magic me-2"></i>Создать маршрут
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div id="itineraryResult" class="itinerary-result" style="display: none;">
+                        <h3 class="mb-4">Ваш маршрут</h3>
+                        <div id="itineraryContent"></div>
+                    </div>
+                    <div id="itineraryPlaceholder" class="text-center text-muted py-5">
+                        <i class="fas fa-route fa-3x mb-3"></i>
+                        <p>Заполните форму слева, чтобы создать персональный маршрут</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Бронирование и платежи</h2>
+                    <p class="lead text-muted">Единая платформа для всех ваших потребностей в путешествии</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="booking-card text-center">
+                        <div class="booking-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5>Авиабилеты</h5>
+                        <p>Российские и китайские авиакомпании</p>
+                        <button class="btn btn-outline-primary" onclick="showBookingModal('flights')">
+                            Найти рейсы
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="booking-card text-center">
+                        <div class="booking-icon">
+                            <i class="fas fa-train"></i>
+                        </div>
+                        <h5>Поезда</h5>
+                        <p>РЖД и китайские железные дороги</p>
+                        <button class="btn btn-outline-primary" onclick="showBookingModal('trains')">
+                            Бронировать
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="booking-card text-center">
+                        <div class="booking-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h5>Отели</h5>
+                        <p>Лучшие варианты размещения</p>
+                        <button class="btn btn-outline-primary" onclick="showBookingModal('hotels')">
+                            Выбрать отель
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="booking-card text-center">
+                        <div class="booking-icon">
+                            <i class="fas fa-taxi"></i>
+                        </div>
+                        <h5>Трансферы</h5>
+                        <p>Яндекс.Такси и Didi в Китае</p>
+                        <button class="btn btn-outline-primary" onclick="showBookingModal('transfers')">
+                            Заказать такси
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Поддерживаемые способы оплаты</h3>
+                    <div class="payment-methods d-flex justify-content-center flex-wrap gap-3">
+                        <div class="payment-method">
+                            <i class="fab fa-cc-visa fa-2x text-primary"></i>
+                            <span>Visa</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fab fa-cc-mastercard fa-2x text-warning"></i>
+                            <span>Mastercard</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-credit-card fa-2x text-success"></i>
+                            <span>Мир</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-mobile-alt fa-2x text-info"></i>
+                            <span>Alipay</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fab fa-weixin fa-2x text-success"></i>
+                            <span>WeChat Pay</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="culture" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-6 fw-bold mb-3">Культура и события</h2>
+                    <p class="lead text-muted">Календарь фестивалей, AR-фильтры и чат</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="support-card">
+                        <h5 class="mb-3"><i class="fas fa-calendar-alt me-2"></i>Календарь событий</h5>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <select id="cultureCity" class="form-select">
+                                    <option value="Пекин">Пекин</option>
+                                    <option value="Шанхай">Шанхай</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <input id="cultureMonth" type="number" min="1" max="12" class="form-control" placeholder="Месяц">
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-primary w-100" id="loadEventsBtn">OK</button>
+                            </div>
+                        </div>
+                        <div id="eventsList" class="mt-3 small"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="support-card">
+                        <h5 class="mb-3"><i class="fas fa-comments me-2"></i>Культурный чат</h5>
+                        <div class="input-group mb-2">
+                            <input id="chatInput" type="text" class="form-control" placeholder="Спросите о достопримечательностях...">
+                            <button id="chatSend" class="btn btn-primary">Отправить</button>
+                        </div>
+                        <div id="chatHistory" class="bg-light rounded p-3 small" style="min-height:100px"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="support-card">
+                        <h5 class="mb-3"><i class="fas fa-vр-cardboard me-2"></i>AR-фильтры</h5>
+                        <div id="arFilters" class="d-flex flex-wrap gap-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="delivery-eco" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-6 fw-bold mb-3">Доставка еды и Эко</h2>
+                    <p class="lead text-muted">Meituan/Ele.me с фильтрами + зеленый туризм</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="support-card">
+                        <h5 class="mb-3"><i class="fas fa-utensils me-2"></i>Доставка еды</h5>
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <select id="dietary" class="form-select">
+                                    <option value="">Все</option>
+                                    <option value="halal">Халяль</option>
+                                    <option value="vegan">Веган</option>
+                                    <option value="vegetarian">Вегетарианец</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check mt-2">
+                                    <input id="ruMenu" type="checkbox" class="form-check-input">
+                                    <label class="form-check-label" for="ruMenu">Русское меню</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="loadFoodBtn" class="btn btn-primary w-100">Показать</button>
+                            </div>
+                        </div>
+                        <div id="foodList" class="mt-3 small"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="support-card">
+                        <h5 class="mb-3"><i class="fas fa-leaf me-2"></i>Эко-инструменты</h5>
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-text">KM</span>
+                                    <input id="co2Flight" type="number" class="form-control" placeholder="Перелет, км">
+                                    <input id="co2Train" type="number" class="form-control" placeholder="Поезд, км">
+                                    <input id="co2Metro" type="number" class="form-control" placeholder="Метро, км">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="calcCo2" class="btn btn-primary w-100">CO2</button>
+                            </div>
+                        </div>
+                        <div id="co2Result" class="mt-2 small"></div>
+                        <hr>
+                        <div class="row g-2">
+                            <div class="col-md-8">
+                                <input id="ecoCity" type="text" class="form-control" placeholder="Город для эко-отелей" value="Пекин">
+                            </div>
+                            <div class="col-md-4">
+                                <button id="loadEcoHotels" class="btn btn-outline-primary w-100">Эко-отели</button>
+                            </div>
+                        </div>
+                        <div id="ecoHotelsList" class="mt-2 small"></div>
+                        <div id="wasteTips" class="mt-2 small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Поддержка на месте</h2>
+                    <p class="lead text-muted">Все необходимые инструменты для комфортного пребывания в Китае</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h5>Офлайн карты</h5>
+                        <p>Скачайте карты для навигации без интернета с русскими подписями</p>
+                        <button class="btn btn-outline-primary btn-sm">Скачать карты</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h5>Переводчик</h5>
+                        <p>Переводите меню, вывески и общайтесь с местными жителями</p>
+                        <button class="btn btn-outline-primary btn-sm" onclick="showTranslator()">Открыть переводчик</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Доставка еды</h5>
+                        <p>Заказывайте еду через Meituan и Ele.me с переведенными меню</p>
+                        <button class="btn btn-outline-primary btn-sm">Заказать еду</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h5>Шопинг-ассистент</h5>
+                        <p>Калькулятор возврата НДС и рекомендации лучших магазинов</p>
+                        <button class="btn btn-outline-primary btn-sm" onclick="showTaxRefund()">Рассчитать возврат</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>VPN и безопасность</h5>
+                        <p>Настройка VPN для доступа к заблокированным сервисам</p>
+                        <button class="btn btn-outline-primary btn-sm">Настроить VPN</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>Медицинская помощь</h5>
+                        <p>Найти клиники, аптеки и получить медицинскую помощь</p>
+                        <button class="btn btn-outline-primary btn-sm">Найти помощь</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-dragon me-2"></i>ChinaTravel
+                    </h5>
+                    <p class="text-white-50">
+                        Ваш надежный спутник в путешествиях по Китаю. 
+                        Безвизовый режим с сентября 2025 года.
+                    </p>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Сервисы</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Планирование</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Бронирование</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Карты</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Переводчик</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Поддержка</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Помощь</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Контакты</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Безопасность</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Скачать приложение</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-light btn-sm">
+                            <i class="fab fa-apple me-1"></i>App Store
+                        </button>
+                        <button class="btn btn-outline-light btn-sm">
+                            <i class="fab fa-google-play me-1"></i>Google Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 ChinaTravel. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end gap-3">
+                        <a href="#" class="text-white-50"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalTitle">Бронирование</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="bookingModalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="translatorModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Переводчик</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Введите текст для перевода</label>
+                        <textarea class="form-control" id="translateText" rows="3" placeholder="Введите текст на любом языке..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="translateText()">
+                        <i class="fas fa-language me-2"></i>Перевести
+                    </button>
+                    <div id="translationResult" class="mt-3 p-3 bg-light rounded" style="display: none;">
+                        <strong>Перевод:</strong>
+                        <div id="translatedText"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taxRefundModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Калькулятор возврата НДС</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Сумма покупки (юани)</label>
+                        <input type="number" class="form-control" id="purchaseAmount" placeholder="Введите сумму покупки">
+                    </div>
+                    <button class="btn btn-primary" onclick="calculateTaxRefund()">
+                        <i class="fas fa-calculator me-2"></i>Рассчитать возврат
+                    </button>
+                    <div id="taxRefundResult" class="mt-3 p-3 bg-light rounded" style="display: none;">
+                        <div id="taxRefundContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/app.js"></script>
+</body>
+</html>
+
+
